@@ -25,9 +25,15 @@ const App = () => {
         }));
     };
 
+    const getOrder = () => {
+        return items.filter(item => item.count > 0);
+    };
+
     return (
         <div className="App">
-            <Order />
+            <Order
+                order={getOrder()}
+            />
             <Items
                 items={items}
                 onIncrease={increaseCount}

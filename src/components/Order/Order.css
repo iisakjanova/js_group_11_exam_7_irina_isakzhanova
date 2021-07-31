@@ -1,0 +1,11 @@
+.OrderItem {
+    display: flex;
+}
+
+.OrderItem span {
+    padding: 0 10px;
+}
+
+.OrderItemName {
+    flex-grow: 1;
+}
