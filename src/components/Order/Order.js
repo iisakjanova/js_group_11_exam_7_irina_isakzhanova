@@ -1,5 +1,9 @@
 import React from 'react';
+import './Order.css';
 import OrderItem from "../OrderItem/OrderItem";
+import TotalPrice from "../TotalPrice";
+
+import {ITEMS} from "../../constants";
 
 const Order = props => {
     let message = {};
@@ -10,6 +14,12 @@ const Order = props => {
             text: 'Please add some items!',
         };
     }
+
+    const getTotalPrice = () => {
+        return props.items.reduce((acc, item) => {
+            return acc + item.count * ITEMS[item.name].price;
+        }, 0);
+    };
 
     return (
         <div className="OrderWrapper">
@@ -27,6 +37,9 @@ const Order = props => {
                             />
                         )
                     })}
+                    <TotalPrice
+                        total={getTotalPrice()}
+                    />
                 </div>
             </fieldset>
         </div>

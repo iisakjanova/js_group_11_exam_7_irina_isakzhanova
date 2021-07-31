@@ -1,0 +1,11 @@
+.TotalPrice {
+    border-top: 1px solid grey;
+    margin-top: 0;
+    padding-top: 20px;
+    display: flex;
+    font-weight: bold;
+}
+
+.Amount {
+    margin: 0 35px 0 auto;
+}

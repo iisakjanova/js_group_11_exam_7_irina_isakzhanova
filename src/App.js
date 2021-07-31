@@ -42,6 +42,7 @@ const App = () => {
     return (
         <div className="App">
             <Order
+                items={items}
                 order={getOrder()}
                 onRemove={removeOrderItem}
             />
