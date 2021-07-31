@@ -25,6 +25,16 @@ const App = () => {
         }));
     };
 
+    const removeOrderItem = id => {
+        setItems(prevItems => prevItems.map(item => {
+            if (item.id === id) {
+                return {...item, count: 0};
+            }
+
+            return item;
+        }));
+    };
+
     const getOrder = () => {
         return items.filter(item => item.count > 0);
     };
@@ -33,6 +43,7 @@ const App = () => {
         <div className="App">
             <Order
                 order={getOrder()}
+                onRemove={removeOrderItem}
             />
             <Items
                 items={items}

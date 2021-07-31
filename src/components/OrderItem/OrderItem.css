@@ -9,3 +9,8 @@
 .OrderItemName {
     flex-grow: 1;
 }
+
+.BtnRemove {
+    color: red;
+    cursor: pointer;
+}

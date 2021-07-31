@@ -23,6 +23,7 @@ const Order = props => {
                             <OrderItem
                                 key={item.id}
                                 item={item}
+                                onRemove={props.onRemove}
                             />
                         )
                     })}
