@@ -1,0 +1,24 @@
+.Item {
+    display: flex;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    min-width: 230px;
+}
+
+.ItemImg {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+}
+
+.ItemInfo {
+    padding: 0 20px;
+}
+
+.ItemPrice {
+    font-size: 14px;
+}
