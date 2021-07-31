@@ -1,7 +1,5 @@
 import React from 'react';
-import './Order.css';
-
-import {ITEMS} from "../../constants";
+import OrderItem from "../OrderItem/OrderItem";
 
 const Order = props => {
     let message = {};
@@ -22,14 +20,10 @@ const Order = props => {
                     <p>{message.text}</p>
                     {props.order.map(item => {
                         return (
-                            <p
-                                className="OrderItem"
+                            <OrderItem
                                 key={item.id}
-                            >
-                                <span className="OrderItemName">{item.name}</span>
-                                <span> X{item.count}</span>
-                                <span>{ITEMS[item.name].price} KGZ</span>
-                            </p>
+                                item={item}
+                            />
                         )
                     })}
                 </div>
